@@ -10,12 +10,12 @@ class Triangle
 
   def kind
     sides = [side_one, side_two, side_three]
-    case
-      when sides.all? { |s| s == sides[0] }
+    case sides.sort[2]
+      when  sides.sort[0]
         :equilateral
-      when
+      when sides.sort[1] && !sides.sort[0]
         :isosceles
-      when
+      when !sides.sort[1]
         :scalene
     end
   end
