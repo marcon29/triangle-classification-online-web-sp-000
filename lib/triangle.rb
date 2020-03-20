@@ -18,7 +18,7 @@ class Triangle
       begin
         raise TriangleError
       rescue TriangleError
-        
+
       end
     case
       when sides.sort[2] == sides.sort[0]
