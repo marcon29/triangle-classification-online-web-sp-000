@@ -5,12 +5,12 @@ class Triangle
     @side_one = side_one
     @side_two = side_two
     @side_three = side_three
-    
+
   end
 
   def kind
     sides = [side_one, side_two, side_three]
-    case 
+    case
       when sides.all? { |s| s == sides[0] }
         :equilateral
       when
@@ -25,5 +25,5 @@ class Triangle
   #end
 
 
-  
+
 end
