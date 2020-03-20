@@ -14,11 +14,9 @@ class Triangle
 
   def kind
     sides = [side_one, side_two, side_three]
+
     if sides.sort[0] + sides.sort[1] <= sides.sort[2] || !sides.all?{ |s| s > 0 }
-      #begin
-        raise TriangleError
-      #rescue TriangleError
-      #end
+      raise TriangleError
     else
       case
         when sides.sort[2] == sides.sort[0]
