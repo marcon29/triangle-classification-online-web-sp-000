@@ -8,9 +8,8 @@ class Triangle
   end
 
   class TriangleError < StandardError
-    # triangle error code
+    "That's not a triangle"
   end
-
 
   def kind
     sides = [side_one, side_two, side_three]
