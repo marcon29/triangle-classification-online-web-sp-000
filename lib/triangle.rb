@@ -18,19 +18,17 @@ class Triangle
       #begin
         raise TriangleError
       #rescue TriangleError
-
       #end
-    case
-      when sides.sort[2] == sides.sort[0]
-        :equilateral
-      when sides.sort[2] == sides.sort[1] && sides.sort[2] != sides.sort[0]
-        :isosceles
-      when sides.sort[2] != sides.sort[1]
-        :scalene
+    else
+      case
+        when sides.sort[2] == sides.sort[0]
+          :equilateral
+        when sides.sort[2] == sides.sort[1] && sides.sort[2] != sides.sort[0]
+          :isosceles
+        when sides.sort[2] != sides.sort[1]
+          :scalene
+      end
     end
   end
-
-
-
-
 end
+
