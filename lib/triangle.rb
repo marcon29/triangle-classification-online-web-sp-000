@@ -5,11 +5,21 @@ class Triangle
     @side_one = side_one
     @side_two = side_two
     @side_three = side_three
-
   end
+
+  class TriangleError < StandardError
+    # triangle error code
+  end
+
 
   def kind
     sides = [side_one, side_two, side_three]
+    if sides.sort[0] + sides.sort[1] <= sides.sort[2] || !sides.all?{ |s| s > 0 }
+      begin
+        raise TriangleError
+      rescue TriangleError
+        
+      end
     case
       when sides.sort[2] == sides.sort[0]
         :equilateral
@@ -20,9 +30,6 @@ class Triangle
     end
   end
 
-
-  #class KindError
-  #end
 
 
 
