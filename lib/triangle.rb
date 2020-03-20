@@ -10,7 +10,7 @@ class Triangle
 
   def kind
     sides = [side_one, side_two, side_three]
-    case 
+    case
       when sides.sort[2] == sides.sort[0]
         :equilateral
       when sides.sort[2] == sides.sort[1] && sides.sort[2] != sides.sort[0]
